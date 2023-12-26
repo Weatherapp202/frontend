@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { IUser } from "../interfaces/User/User";
 import { useNavigate } from "react-router-dom";
+import { IUser } from "../interfaces/User/User";
 
-function Home() {
+function Dashboard() {
   const user = localStorage.getItem("user");
   const navigate = useNavigate();
 
@@ -18,7 +18,18 @@ function Home() {
       navigate("/login");
     }
   }, []);
-  return <div>Home</div>;
+  
+
+  return (
+    <div className="w-full p-8 px-4">
+      <p className="font-bold text-xl">Bienvenido</p>
+      <div className="border border-slate-500 mt-8 rounded-lg p-2">
+        <p className="font-bold">Usuarios:</p>
+
+
+      </div>
+    </div>
+  );
 }
 
-export default Home;
+export default Dashboard;
