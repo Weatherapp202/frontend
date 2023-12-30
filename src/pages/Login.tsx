@@ -44,8 +44,11 @@ function Login() {
       <section className="flex flex-col gap-4 justify-center items-center mt-5">
         <TextField onChange={(e) => setUsername(e.target.value)} label="Usuario" variant="outlined" required />
         <TextField onChange={(e) => setPassword(e.target.value)} label="Contraseña" variant="outlined" type="password" required />
-        <Button variant="outlined" onClick={handleLogin}>
+        <Button onClick={handleLogin} variant="contained">
           Ingresar
+        </Button>
+        <Button variant="outlined" onClick={() => navigate("/registrarme")}>
+          Registarme
         </Button>
       </section>
     </div>

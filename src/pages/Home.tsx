@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { IUser } from "../interfaces/User/User";
 import { useNavigate } from "react-router-dom";
+import MyMapComponent from "../components/Map";
+import DrawerCustomComponent from "../components/DrawerCustomComponent";
 
 function Home() {
   const user = localStorage.getItem("user");
@@ -18,7 +20,14 @@ function Home() {
       navigate("/login");
     }
   }, []);
-  return <div>Home</div>;
+
+  return (
+    <div>
+      <DrawerCustomComponent />
+      <MyMapComponent />
+      
+    </div>
+  );
 }
 
 export default Home;

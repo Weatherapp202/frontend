@@ -13,3 +13,17 @@ export interface IPermissions {
   user: IUser[];
   created_at: string;
 }
+
+export interface IDeleteUser {
+  id: number;
+}
+
+export interface INewUser {
+  name: string;
+  password: string;
+  role: string;
+}
+
+export interface IDeleteOrAddAdmin {
+  id: number;
+}
