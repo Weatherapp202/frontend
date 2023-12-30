@@ -48,7 +48,7 @@ function Login() {
           Ingresar
         </Button>
         <Button variant="outlined" onClick={() => navigate("/registrarme")}>
-          Registarme
+          Registarse
         </Button>
       </section>
     </div>
