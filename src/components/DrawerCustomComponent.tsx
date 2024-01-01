@@ -1,12 +1,14 @@
 import { Button, Drawer } from "@mui/material";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 function DrawerCustomComponent() {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-
+  const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("user");
+    navigate("/");
     window.location.reload();
   };
 

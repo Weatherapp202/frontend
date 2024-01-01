@@ -20,8 +20,6 @@ function Condition({ currentLngLat, change }: Props) {
     });
   }, [change]);
 
-  console.log(dataPlace);
-
   return (
     <div className="p-4 border w-[90%] m-auto mt-6">
       {dataPlace && (
